@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Heading from "../components/Heading";
 
 const Dashboard = () => {
@@ -8,8 +8,26 @@ const Dashboard = () => {
           <div className="text-center text-white">
           <div className="max-w-4xl">
             <Heading title="Dashboard" subtitle="Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"/>
-            <Link to='/dashboard/cart' className="btn btn-outline rounded-full btn-primary bg-white">Cart</Link>
-            <Link to='/dashboard/wishlist' className="btn btn-outline rounded-full btn-primary bg-white">Wishlist</Link>
+            <NavLink
+              to="/dashboard/cart"
+              className={({ isActive }) =>
+                `btn btn-outline rounded-full btn-primary bg-white ${
+                  isActive ? "btn-active" : "hover:btn-active"
+                }`
+              }
+            >
+              Cart
+            </NavLink>
+            <NavLink
+              to="/dashboard/wishlist"
+              className={({ isActive }) =>
+                `btn btn-outline rounded-full btn-primary bg-white ${
+                  isActive ? "btn-active" : "hover:btn-active"
+                }`
+              }
+            >
+              Wishlist
+            </NavLink>
           </div>
         </div>
         </div>
