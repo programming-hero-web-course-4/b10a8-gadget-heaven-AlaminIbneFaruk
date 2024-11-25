@@ -1,0 +1,162 @@
+[
+  {
+    "product_id": "M001",
+    "product_title": "Smartphone X200",
+    "product_image": "https://i.ibb.co.com/cc5sSw5/download-3.jpg",
+    "category": "Mobile",
+    "price": 699.99,
+    "description": "High-performance smartphone with a 6.5-inch display and 128GB storage.",
+    "specification": [
+      "6.5-inch display",
+      "128GB storage",
+      "Triple rear camera",
+      "4000mAh battery"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "M002",
+    "product_title": "Smartphone A10",
+    "product_image": "https://i.ibb.co.com/tq4b0Bg/download-4.jpg",
+    "category": "Mobile",
+    "price": 549.99,
+    "description": "Affordable smartphone with dual rear cameras and long battery life.",
+    "specification": [
+      "6.1-inch display",
+      "64GB storage",
+      "Dual rear camera",
+      "4500mAh battery"
+    ],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "product_id": "M003",
+    "product_title": "Smartphone Z3 Pro",
+    "product_image": "https://i.ibb.co.com/jk4mwZV/download-5.jpg",
+    "category": "Mobile",
+    "price": 799.99,
+    "description": "Flagship smartphone with a high-resolution display and powerful processor.",
+    "specification": [
+      "6.7-inch display",
+      "256GB storage",
+      "Quad rear camera",
+      "5000mAh battery"
+    ],
+    "availability": false,
+    "rating": 4.8
+  },
+  {
+    "product_id": "M004",
+    "product_title": "Smartphone Lite",
+    "product_image": "https://i.ibb.co.com/vV46V3v/images-2.jpg",
+    "category": "Mobile",
+    "price": 499.99,
+    "description": "Lightweight smartphone with an efficient processor and vibrant display.",
+    "specification": [
+      "5.8-inch display",
+      "32GB storage",
+      "Single rear camera",
+      "3000mAh battery"
+    ],
+    "availability": true,
+    "rating": 4.2
+  },
+  {
+    "product_id": "M005",
+    "product_title": "Smartphone Ultra 5G",
+    "product_image": "https://i.ibb.co.com/J56D763/images-3.jpg",
+    "category": "Mobile",
+    "price": 899.99,
+    "description": "5G-capable smartphone with superior camera and high-speed performance.",
+    "specification": [
+      "6.9-inch display",
+      "512GB storage",
+      "Quad rear camera",
+      "5000mAh battery"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "M006",
+    "product_title": "Smartphone Mini",
+    "product_image": "https://i.ibb.co.com/BrJLNtF/images-4.jpg",
+    "category": "Mobile",
+    "price": 359.99,
+    "description": "Compact smartphone with essential features for everyday use.",
+    "specification": [
+      "5.5-inch display",
+      "64GB storage",
+      "Dual rear camera",
+      "3500mAh battery"
+    ],
+    "availability": false,
+    "rating": 4.1
+  },
+  {
+    "product_id": "E001",
+    "product_title": "Wireless Earphones X",
+    "product_image": "https://i.ibb.co.com/pb6XFXN/download-6.jpg",
+    "category": "Earphones",
+    "price": 79.99,
+    "description": "High-quality wireless earphones with immersive sound and quick charging.",
+    "specification": [
+      "Bluetooth 5.0",
+      "Noise Isolation",
+      "15 Hours Battery Life",
+      "In-ear Design"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": "E002",
+    "product_title": "Sport Earbuds S",
+    "product_image": "https://i.ibb.co.com/KDHYpJs/download-7.jpg",
+    "category": "Earphones",
+    "price": 59.99,
+    "description": "Sweat-resistant sport earbuds with ergonomic fit and powerful bass.",
+    "specification": [
+      "Bluetooth 5.0",
+      "Sweat Resistance",
+      "12 Hours Battery Life",
+      "In-ear Secure Fit"
+    ],
+    "availability": true,
+    "rating": 4.2
+  },
+  {
+    "product_id": "L001",
+    "product_title": "Laptop Pro 15",
+    "product_image": "https://i.ibb.co.com/tBY5LDp/download-8.jpg",
+    "category": "Laptop",
+    "price": 1299.99,
+    "description": "High-performance laptop with a 15-inch display and 512GB SSD.",
+    "specification": [
+      "15-inch display",
+      "512GB SSD",
+      "16GB RAM",
+      "Intel i7 processor"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "L002",
+    "product_title": "Laptop Air 13",
+    "product_image": "https://i.ibb.co.com/mCwkhg0/download-9.jpg",
+    "category": "Laptop",
+    "price": 999.99,
+    "description": "Lightweight and portable laptop with a 13-inch display and all-day battery life.",
+    "specification": [
+      "13-inch display",
+      "256GB SSD",
+      "8GB RAM",
+      "Intel i5 processor"
+    ],
+    "availability": false,
+    "rating": 4.5
+  }
+]

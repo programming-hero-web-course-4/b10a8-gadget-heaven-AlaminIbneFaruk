@@ -1,0 +1,27 @@
+[
+  {
+    "id":1,
+    "category":"Mobile",
+    "slug":"mobile"
+  },
+  {
+    "id":2,
+    "category":"Earphones",
+    "slug":"ear-phones"
+  },
+  {
+    "id":3,
+    "category":"Laptops",
+    "slug":"laptops"
+  },
+  {
+    "id":4,
+    "category":"Keyboards",
+    "slug":"keboards"
+  },
+  {
+    "id":5,
+    "category":"All Products",
+    "slug":"all"
+  }
+]
