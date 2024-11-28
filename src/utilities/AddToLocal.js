@@ -26,22 +26,28 @@ const getStoredItemPrice=()=>{
     return [];
   }
 }
-const addToStoredCartItem= (id, price)=>{
+const addToStoredCartItem= (id, price,availability)=>{
   const storedList =getStoredCartItem();
   const storedListPrice =getStoredItemPrice();
-  if(storedList.includes(id)){
-    // do not add 
-    console.log(id,"already exists");
+  if(!availability){
+    alert("this is not available");
   }
   else{
-    // add it
-    storedList.push(id);
-    storedListPrice.push(price);
-    const storedListStr=JSON.stringify(storedList);
+
+    if(storedList.includes(id)){
+      // do not add 
+      console.log(id,"already exists");
+    }
+    else{
+      // add it
+      storedList.push(id);
+      storedListPrice.push(price);
+      const storedListStr=JSON.stringify(storedList);
     const storedListPriceStr=JSON.stringify(storedListPrice);
     localStorage.setItem('cart-list-id',storedListStr)
     localStorage.setItem('cart-list-price',storedListPriceStr)
   }
+  } 
 }
 
 const getStoredWishListItem= ()=>{

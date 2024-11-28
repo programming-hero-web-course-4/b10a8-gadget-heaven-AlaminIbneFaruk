@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { getStoredCartItem, getStoredItemPrice } from "../utilities/AddToLocal";
+import { FcApproval } from "react-icons/fc";
+
 // import Card from "../components/Card";
 import CartCard from "../components/CartCard";
 
@@ -8,7 +10,6 @@ import CartCard from "../components/CartCard";
 const Cart = () => {
   const allProducts= useLoaderData();
   const [products,setProducts]=useState([]);
-  const [productPrice,setProductPrice]=useState([]);
   const [TotalPrice,setTotalPrice]=useState(0);
   useEffect(() => {
     const storedCartList = getStoredCartItem();
@@ -17,23 +18,22 @@ const Cart = () => {
     );
     setProducts(CartList);
   }, [allProducts]);
-  useEffect(()=>{
-    const storedPriceList=getStoredItemPrice()
-    setProductPrice(storedPriceList)
-    {
-      productPrice.map(price=>setTotalPrice(TotalPrice+price))
-      }
-  },[])
   const sortByPrice = () => {
     const sortedProducts = [...products].sort((a, b) => a.price - b.price);
     setProducts(sortedProducts);
   };
   useEffect(() => {
     const storedPriceList = getStoredItemPrice();
-    setProductPrice(storedPriceList);
     const total = storedPriceList.reduce((acc, price) => acc + price, 0);
     setTotalPrice(total);
   }, []);
+  
+
+      
+    const clearingData=()=>{
+      localStorage.removeItem('cart-list-id')
+      localStorage.removeItem('cart-list-price')
+    }
   return (
     <div>
       <div className="flex justify-between">
@@ -41,7 +41,23 @@ const Cart = () => {
         <div className="flex justify-evenly items-center">
           <p className="px-20 font-extrabold">Total Cost:{TotalPrice}</p>
           <button onClick={sortByPrice} className="btn rounded-full btn-outline">Sort By Price</button>
-          <button className="btn rounded-full bg-purple-600 text-white">Purchase</button>
+          <button className="btn rounded-full bg-purple-600 text-white" onClick={clearingData}>Purchase</button>
+          <dialog id="my_modal_1" className="modal">
+            <div className="modal-box flex flex-col items-center">
+              <div className="text-5xl">
+                <FcApproval />
+              </div>
+              <h3 className="font-bold text-lg py-5">Payment Successfully!!</h3>
+              <p className="py-1">Thanks for purchasing</p>
+              <p className="py-1">Total: {TotalPrice}</p>
+              <div className="modal-action">
+                <form method="dialog">
+                  {/* if there is a button in form, it will close the modal */}
+                  <button className="btn btn-wide rounded-full">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
 
         </div>
       </div>

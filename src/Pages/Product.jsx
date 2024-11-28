@@ -10,8 +10,8 @@ const Product = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const handleAddToCart=(id,price)=>{
-    addToStoredCartItem(id,price)
+  const handleAddToCart=(id,price,availability)=>{
+    addToStoredCartItem(id,price,availability)
   }
   const handleWishlist=(id)=>{
     addToStoredWishListItem(id)
@@ -101,7 +101,7 @@ const Product = () => {
 
             <div className="card-actions justify-start">
               <button className="btn rounded-full bg-purple-500 text-white"
-              onClick={()=>{handleAddToCart(productId,price)}}>
+              onClick={()=>{handleAddToCart(productId,price,availability)}}>
                 <span>Add To Cart</span>
                 <MdOutlineShoppingCart/>
               </button>

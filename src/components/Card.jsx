@@ -35,6 +35,7 @@ Card.propTypes = {
       product_image: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
       product_id: PropTypes.string.isRequired,
+      availability:PropTypes.string.isRequired
     })
   ,
 };

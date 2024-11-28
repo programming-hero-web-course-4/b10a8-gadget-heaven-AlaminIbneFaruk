@@ -4,7 +4,7 @@
     "product_title": "Smartphone X200",
     "product_image": "https://i.ibb.co.com/cc5sSw5/download-3.jpg",
     "category": "Mobile",
-    "price": 699.99,
+    "price": 6990,
     "description": "High-performance smartphone with a 6.5-inch display and 128GB storage.",
     "specification": [
       "6.5-inch display",
@@ -20,7 +20,7 @@
     "product_title": "Smartphone A10",
     "product_image": "https://i.ibb.co.com/tq4b0Bg/download-4.jpg",
     "category": "Mobile",
-    "price": 549.99,
+    "price": 5490,
     "description": "Affordable smartphone with dual rear cameras and long battery life.",
     "specification": [
       "6.1-inch display",
@@ -36,7 +36,7 @@
     "product_title": "Smartphone Z3 Pro",
     "product_image": "https://i.ibb.co.com/jk4mwZV/download-5.jpg",
     "category": "Mobile",
-    "price": 799.99,
+    "price": 7990,
     "description": "Flagship smartphone with a high-resolution display and powerful processor.",
     "specification": [
       "6.7-inch display",
@@ -52,7 +52,7 @@
     "product_title": "Smartphone Lite",
     "product_image": "https://i.ibb.co.com/vV46V3v/images-2.jpg",
     "category": "Mobile",
-    "price": 499.99,
+    "price": 4990,
     "description": "Lightweight smartphone with an efficient processor and vibrant display.",
     "specification": [
       "5.8-inch display",
@@ -68,7 +68,7 @@
     "product_title": "Smartphone Ultra 5G",
     "product_image": "https://i.ibb.co.com/J56D763/images-3.jpg",
     "category": "Mobile",
-    "price": 899.99,
+    "price": 8990,
     "description": "5G-capable smartphone with superior camera and high-speed performance.",
     "specification": [
       "6.9-inch display",
@@ -84,7 +84,7 @@
     "product_title": "Smartphone Mini",
     "product_image": "https://i.ibb.co.com/BrJLNtF/images-4.jpg",
     "category": "Mobile",
-    "price": 359.99,
+    "price": 3590,
     "description": "Compact smartphone with essential features for everyday use.",
     "specification": [
       "5.5-inch display",
@@ -100,7 +100,7 @@
     "product_title": "Wireless Earphones X",
     "product_image": "https://i.ibb.co.com/pb6XFXN/download-6.jpg",
     "category": "Earphones",
-    "price": 79.99,
+    "price": 790,
     "description": "High-quality wireless earphones with immersive sound and quick charging.",
     "specification": [
       "Bluetooth 5.0",
@@ -116,7 +116,7 @@
     "product_title": "Sport Earbuds S",
     "product_image": "https://i.ibb.co.com/KDHYpJs/download-7.jpg",
     "category": "Earphones",
-    "price": 59.99,
+    "price": 590,
     "description": "Sweat-resistant sport earbuds with ergonomic fit and powerful bass.",
     "specification": [
       "Bluetooth 5.0",
@@ -132,7 +132,7 @@
     "product_title": "Laptop Pro 15",
     "product_image": "https://i.ibb.co.com/tBY5LDp/download-8.jpg",
     "category": "Laptop",
-    "price": 1299.99,
+    "price": 12990,
     "description": "High-performance laptop with a 15-inch display and 512GB SSD.",
     "specification": [
       "15-inch display",
@@ -148,7 +148,7 @@
     "product_title": "Laptop Air 13",
     "product_image": "https://i.ibb.co.com/mCwkhg0/download-9.jpg",
     "category": "Laptop",
-    "price": 999.99,
+    "price": 9990,
     "description": "Lightweight and portable laptop with a 13-inch display and all-day battery life.",
     "specification": [
       "13-inch display",
