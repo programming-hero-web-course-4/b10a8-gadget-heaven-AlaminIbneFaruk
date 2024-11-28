@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import { Link } from "react-router-dom";
 
 const Laptop = () => {
   const [gadgets, setGadgets] = useState([]); // State to hold all gadgets
@@ -28,11 +29,27 @@ const Laptop = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto">
       {products && products.length > 0 ? (
-        products.map(product => <Card key={product.id} gadget={product} />)
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto">
+          {products.map(product => <Card key={product.id} gadget={product} />)}
+        </div>
       ) : (
-        <p>No products found</p>
+        <div className="hero bg-base-200 min-h-screen">
+          <div className="hero-content flex-col">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+              className="rounded-lg shadow-2xl w-96"
+              alt="Not Found"
+            />
+            <div>
+              <h1 className="text-4xl font-bold">Spiderman: I could Not Found this product</h1>
+              <p className="py-6">The product is not available</p>
+              <Link to="/" className="btn btn-primary">Go Back Home</Link>
+            </div>
+          </div>
+        </div>
       )}
     </div>
+    
   );
 };
 

@@ -7,7 +7,7 @@ import Dashboard from '../Pages/Dashboard';
 import ErrorPage from '../Pages/ErrorPage';
 import ExploreGadgets from '../components/ExploreGadgets';
 import Product from '../Pages/product';
-import Cart from '../Pages/cart';
+import Cart from '../Pages/Cart';
 import Wishlist from '../Pages/wishlist';
 import Gadget from '../components/Gadget';
 import Keyboards from '../components/Keyboard';
@@ -90,11 +90,31 @@ const Routes = createBrowserRouter([
           {
             path: 'cart',
             element: <Cart />,
-            errorElement: <ErrorPage />
+            errorElement: <ErrorPage />,
+            loader: async () => {
+              try {
+                const response = await fetch('/products.json'); // Path correction
+                if (!response.ok) throw new Error('Network response was not ok');
+                return await response.json();
+              } catch (error) {
+                console.error("Failed to fetch data:", error);
+                return null;
+              }
+            },
           },
           {
             path: 'wishlist',
             element: <Wishlist />,
+            loader: async () => {
+              try {
+                const response = await fetch('/products.json'); // Path correction
+                if (!response.ok) throw new Error('Network response was not ok');
+                return await response.json();
+              } catch (error) {
+                console.error("Failed to fetch data:", error);
+                return null;
+              }
+            },
             errorElement: <ErrorPage />
           }
         ]
