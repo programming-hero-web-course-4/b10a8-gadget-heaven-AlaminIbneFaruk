@@ -11,7 +11,7 @@ const Card = ({gadget}) => {
   // console.log(product_title,product_image,product_id,price)
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto">
-      <div className="card card-compact bg-base-100 w-80 shadow-xl">
+      <div className="card bg-base-100 w-80 shadow-xl">
         <figure className='py-14'>
           <img
             src={product_image}

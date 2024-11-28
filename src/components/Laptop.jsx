@@ -29,9 +29,9 @@ const Laptop = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto">
       {products && products.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto">
+        <>
           {products.map(product => <Card key={product.id} gadget={product} />)}
-        </div>
+        </>
       ) : (
         <div className="hero bg-base-200 min-h-screen">
           <div className="hero-content flex-col">

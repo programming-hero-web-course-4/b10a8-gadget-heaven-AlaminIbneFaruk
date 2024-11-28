@@ -10,18 +10,19 @@ const CartCard = ({gadget}) => {
   const {product_title,product_image,product_id,price,description}=gadget
   // console.log(product_title,product_image,product_id,price)
   return (
-    <div className="flex flex-col md:flex-row gap-5 mx-auto">
+    <div className="">
       <div className="card flex-row card-compact bg-base-100 shadow-xl">
         <figure className='py-14'>
           <img
             src={product_image}
-            alt="Shoes"  className='h-[100px]'/>
+            alt="Shoes"  className='h-[100px] w-full mx-10'/>
         </figure>
         <div className="card-body">
           <h2 className="card-title">{product_title}</h2>
           <p>{price}$</p>
           <div className="card-actions justify-start">
             <NavLink to={`/product/${product_id}`} className="btn btn-primary btn-outline rounded-full">View Details</NavLink>
+            <p>{description}</p>
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@ const Wishlist = () => {
 
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto">
+      <div className="">
       {products && products.length > 0 ? (
         products.map(product => <CartCard key={product.id} gadget={product} />)
       ) : (
