@@ -5,8 +5,6 @@ import Card from './Card';
 
 const Gadget = () => {
   const {cards}=useParams()
-  // console.log(cards);
-  // const { product_title, product_image, price ,product_id } = gadget;
   const [gadgets, setGadgets] = useState([]);
   useEffect(()=>{
     const fetchProducts=async () => {
@@ -16,7 +14,7 @@ const Gadget = () => {
     }
     fetchProducts();
   },[])
-  // console.log(gadgets)
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto">{cards}
     {gadgets.map(gadget => (

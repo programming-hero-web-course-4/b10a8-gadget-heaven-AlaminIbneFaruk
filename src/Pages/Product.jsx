@@ -10,20 +10,12 @@ const Product = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const handleAddToCart=(TEXT)=>{
-    console.log(TEXT);
-    // understand what to store 
-    // where to store
-    // ki rupe store koro array, list, correction
-    // check korte paro already ache ki na
-    // na thakle add korte hobe
-    // thakle add korte hobe na
-    // 
-    addToStoredCartItem(TEXT)
+  const handleAddToCart=(id,price)=>{
+    addToStoredCartItem(id,price)
   }
-  const handleWishlist=(TEXT)=>{
-    addToStoredWishListItem(TEXT)
-    console.log(TEXT);
+  const handleWishlist=(id)=>{
+    addToStoredWishListItem(id)
+
   }
   useEffect(() => {
     // Fetch product details (replace with your API or local fetch logic)
@@ -33,7 +25,6 @@ const Product = () => {
       try{
         const res=await fetch('/products.json')
       const data=await res.json()   
-        console.log(data)
         const foundProduct =data.find(item => item.product_id === productId); // Ensure comparison with a number
         setProduct(foundProduct);
         setLoading(false); // Set loading to false after data is fetched
@@ -110,7 +101,7 @@ const Product = () => {
 
             <div className="card-actions justify-start">
               <button className="btn rounded-full bg-purple-500 text-white"
-              onClick={()=>{handleAddToCart(productId)}}>
+              onClick={()=>{handleAddToCart(productId,price)}}>
                 <span>Add To Cart</span>
                 <MdOutlineShoppingCart/>
               </button>

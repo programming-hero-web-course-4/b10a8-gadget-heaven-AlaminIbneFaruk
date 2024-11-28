@@ -1,6 +1,6 @@
 const getStoredCartItem= ()=>{
-  //read-list
-  const storedListStr = localStorage.getItem('read-list');
+  //cart-list-id
+  const storedListStr = localStorage.getItem('cart-list-id');
   if(storedListStr){
     // string ke json a poriborton const storedListJSON= JSON.parse(storedlistStr)
     const storedListJSON= JSON.parse(storedListStr);
@@ -13,8 +13,22 @@ const getStoredCartItem= ()=>{
   }
 
 }
-const addToStoredCartItem= (id)=>{
+const getStoredItemPrice=()=>{
+  const storedListStr = localStorage.getItem('cart-list-price');
+  if(storedListStr){
+    // string ke json a poriborton const storedListJSON= JSON.parse(storedlistStr)
+    const storedListJSON= JSON.parse(storedListStr);
+    console.log('stored List exists');
+    return storedListJSON;
+  }
+  else{
+    console.log('stored List does not exists');
+    return [];
+  }
+}
+const addToStoredCartItem= (id, price)=>{
   const storedList =getStoredCartItem();
+  const storedListPrice =getStoredItemPrice();
   if(storedList.includes(id)){
     // do not add 
     console.log(id,"already exists");
@@ -22,13 +36,16 @@ const addToStoredCartItem= (id)=>{
   else{
     // add it
     storedList.push(id);
+    storedListPrice.push(price);
     const storedListStr=JSON.stringify(storedList);
-    localStorage.setItem('read-list',storedListStr)
+    const storedListPriceStr=JSON.stringify(storedListPrice);
+    localStorage.setItem('cart-list-id',storedListStr)
+    localStorage.setItem('cart-list-price',storedListPriceStr)
   }
 }
 
 const getStoredWishListItem= ()=>{
-  //read-list
+  //cart-list-id
   const storedListStr = localStorage.getItem('wish-list');
   if(storedListStr){
     // string ke json a poriborton const storedListJSON= JSON.parse(storedlistStr)
@@ -55,4 +72,4 @@ const addToStoredWishListItem= (id)=>{
     localStorage.setItem('wish-list',storedListStr)
   }
 }
-export {addToStoredWishListItem , getStoredWishListItem , addToStoredCartItem, getStoredCartItem};
+export {addToStoredWishListItem , getStoredWishListItem , addToStoredCartItem, getStoredCartItem , getStoredItemPrice};

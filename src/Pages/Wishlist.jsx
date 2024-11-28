@@ -10,7 +10,6 @@ const Wishlist = () => {
     const storedCartList=getStoredWishListItem()
     console.log(storedCartList,allProducts)
     const CartList = allProducts.filter(cartProduct=>storedCartList.includes(cartProduct.product_id))
-    console.log(CartList)
     setProducts(CartList)
   },[allProducts])
   return (
@@ -24,7 +23,7 @@ const Wishlist = () => {
 
         </div>
       </div>
-      <div className="">
+      <div >
       {products && products.length > 0 ? (
         products.map(product => <CartCard key={product.id} gadget={product} />)
       ) : (

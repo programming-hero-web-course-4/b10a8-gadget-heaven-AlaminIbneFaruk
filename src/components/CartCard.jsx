@@ -1,16 +1,11 @@
 import PropTypes from 'prop-types';
-
 import { NavLink, useParams } from 'react-router-dom';
-
-
-const CartCard = ({gadget}) => {
-  // console.log(gadget);                       
+const CartCard = ({gadget}) => {                  
   const { cards } = useParams();
   console.log(cards);
   const {product_title,product_image,product_id,price,description}=gadget
-  // console.log(product_title,product_image,product_id,price)
   return (
-    <div className="">
+    <div>
       <div className="card flex-row card-compact bg-base-100 shadow-xl">
         <figure className='py-14'>
           <img

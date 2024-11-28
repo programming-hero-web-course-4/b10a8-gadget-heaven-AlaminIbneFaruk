@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import { NavLink, useParams } from 'react-router-dom';
 
 
-const Card = ({gadget}) => {
-  // console.log(gadget);                       
+const Card = ({gadget}) => {                     
   const { cards } = useParams();
   console.log(cards);
   const {product_title,product_image,product_id,price}=gadget
-  // console.log(product_title,product_image,product_id,price)
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto">
       <div className="card bg-base-100 w-80 shadow-xl">

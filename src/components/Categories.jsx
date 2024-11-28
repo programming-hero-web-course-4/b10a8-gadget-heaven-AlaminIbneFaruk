@@ -2,9 +2,6 @@
 
 import { Link } from "react-router-dom";
 const Categories = ({ categories }) => {
-  categories.map(category=>
-    console.log(category.category)
-  )
   return (
     <div>
       <ul className="menu bg-base-200 rounded-box mr-5 max-h-[250px]">
