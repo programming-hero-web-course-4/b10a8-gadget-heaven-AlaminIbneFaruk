@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { getStoredCartItem, getStoredItemPrice } from "../utilities/AddToLocal";
-
+import { FcApproval } from "react-icons/fc";
 
 // import Card from "../components/Card";
 import CartCard from "../components/CartCard";
-import Modal from "../components/modal";
+
 
 
 const Cart = () => {
@@ -35,7 +35,6 @@ const Cart = () => {
       localStorage.removeItem('cart-list-id')
       localStorage.removeItem('cart-list-price')
       localStorage.removeItem('cart-list-availability')
-      document.getElementById('my_modal_4').showModal()
     }
   return (
     <div>
@@ -44,10 +43,29 @@ const Cart = () => {
         <div className="flex justify-evenly items-center">
           <p className="px-20 font-extrabold">Total Cost:{TotalPrice}</p>
           <button onClick={sortByPrice} className="btn rounded-full btn-outline">Sort By Price</button>
-          <button className="btn rounded-full bg-purple-600 text-white" onClick={()=>clearingData()}>Purchase</button>
+          <button className="btn rounded-full bg-purple-600 text-white" onClick={()=>{
+            document.getElementById('my_modal_4').showModal()
+            clearingData()
+          }}>Purchase</button>
+          <dialog id="my_modal_1" className="modal">
+            <div className="modal-box flex flex-col items-center">
+              <div className="text-5xl">
+                <FcApproval />
+              </div>
+              <h3 className="font-bold text-lg py-5">Payment Successfully!!</h3>
+              <p className="py-1">Thanks for purchasing</p>
+              <p className="py-1">Total: {TotalPrice}</p>
+              <div className="modal-action">
+                <form method="dialog">
+                  {/* if there is a button in form, it will close the modal */}
+                  <button className="btn btn-wide rounded-full">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+
         </div>
       </div>
-          <Modal TotalPrice={TotalPrice}/>
       <div>
       {products && products.length > 0 ? (
         products.map(product => <CartCard key={product.id} gadget={product} />)
