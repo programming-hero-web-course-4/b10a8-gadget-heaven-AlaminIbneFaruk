@@ -15,7 +15,6 @@ const Product = () => {
   }
   const handleWishlist=(id)=>{
     addToStoredWishListItem(id)
-
   }
   useEffect(() => {
     // Fetch product details (replace with your API or local fetch logic)

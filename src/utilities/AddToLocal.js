@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getStoredCartItem= ()=>{
   //cart-list-id
   const storedListStr = localStorage.getItem('cart-list-id');
@@ -46,6 +48,7 @@ const addToStoredCartItem= (id, price,availability)=>{
     const storedListPriceStr=JSON.stringify(storedListPrice);
     localStorage.setItem('cart-list-id',storedListStr)
     localStorage.setItem('cart-list-price',storedListPriceStr)
+    toast("Successfully Added it to the cart!!!")
   }
   } 
 }
@@ -76,6 +79,7 @@ const addToStoredWishListItem= (id)=>{
     storedList.push(id);
     const storedListStr=JSON.stringify(storedList);
     localStorage.setItem('wish-list',storedListStr)
+    toast("Successfully Added it to the Wishlist!!!")
   }
 }
 export {addToStoredWishListItem , getStoredWishListItem , addToStoredCartItem, getStoredCartItem , getStoredItemPrice};

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { getStoredWishListItem } from "../utilities/AddToLocal";
-import CartCard from "../components/CartCard";
+import WishlistCard from "../components/WishlistCard";
 
 const Wishlist = () => {
   const allProducts= useLoaderData();
@@ -15,13 +15,13 @@ const Wishlist = () => {
   return (
     <div>
       <div className="flex justify-between">
-      <h1 className="font-extrabold">Cart</h1>
+      <h1 className="font-extrabold">Wishlist</h1>
         <div className="flex justify-evenly items-center">
         </div>
       </div>
       <div >
       {products && products.length > 0 ? (
-        products.map(product => <CartCard key={product.id} gadget={product} />)
+        products.map(product => <WishlistCard key={product.id} gadget={product} />)
       ) : (
         <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
